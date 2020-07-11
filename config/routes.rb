@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :salons
-  devise_for :users
+  devise_for :salons, controllers: {   
+  registrations: 'salons/registrations',
+  sessions: 'salons/sessions' }
+
+  devise_for :users, controllers: {   
+  registrations: 'users/registrations',
+  sessions: 'users/sessions' }
   
   namespace :user do
   	resource :users
