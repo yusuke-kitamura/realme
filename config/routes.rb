@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
   devise_for :salons
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  namespace :user do
+  	resourse :users
+  	resourses :salons do
+  		resourse :favorites, only: [:index, :create, :destroy]
+  	end
+  end
+
+  namespace :salon do
+  	resourse :salon ,only: [:show, :edit, :update]
+  	resourses :users, only: [:show]
+  end
 end
