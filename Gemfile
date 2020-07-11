@@ -63,6 +63,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails'
+
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 # 画像サイズ変更用
 gem "refile-mini_magick"
