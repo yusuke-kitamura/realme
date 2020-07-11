@@ -3,14 +3,14 @@ Rails.application.routes.draw do
   devise_for :users
   
   namespace :user do
-  	resourse :users
-  	resourses :salons do
-  		resourse :favorites, only: [:index, :create, :destroy]
+  	resource :users
+  	resources :salons do
+  		resource :favorites, only: [:index, :create, :destroy]
   	end
   end
 
   namespace :salon do
-  	resourse :salon ,only: [:show, :edit, :update]
-  	resourses :users, only: [:show]
+  	resource :salon ,only: [:show, :edit, :update]
+  	resources :users, only: [:show]
   end
 end
