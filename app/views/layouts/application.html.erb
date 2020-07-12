@@ -16,18 +16,46 @@
 
         <header>
             <nav>
-                <ul>
-                    <li class="dropdown">
-                        <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU</button>
-                        <ul class="dropdown-menu">
-                            <li><%= link_to "オンラインサロン", "#" %></li>
-                            <li><%= link_to "会員情報", "#"%></li>
-                            <li><%= link_to "ブックマーク","#"%></li>
-                            <li><%= link_to "ログアウト", "#"%></li>
-                        </ul>
-                    </li>
-                </ul>
+              <% if user_signed_in? %>
+                  <ul>
+                      <li class="dropdown">
+                          <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU</button>
+                          <ul class="dropdown-menu">
+                              <li><%= link_to "オンラインサロン", "#" %></li>
+                              <li><%= link_to "会員情報", "#"%></li>
+                              <li><%= link_to "ブックマーク","#"%></li>
+                              <li><%= link_to "ログアウト", "#"%></li>
+                          </ul>
+                      </li>
+                  </ul>
+
+              <% elsif salon_signed_in? %>
+                  <ul>
+                      <li class="dropdown">
+                          <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU</button>
+                          <ul class="dropdown-menu">
+                              <li><%= link_to "オンラインサロン情報", "#"%></li>
+                              <li><%= link_to "メッセージ","#"%></li>
+                              <li><%= link_to "ログアウト", "#"%></li>
+                          </ul>
+                      </li>
+                  </ul>
+
+              <% else %>
+                  <ul>
+                      <li class="dropdown">
+                          <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU</button>
+                          <ul class="dropdown-menu">
+                              <li><%= link_to "オンラインサロンログイン", "#" %></li>
+                              <li><%= link_to "ユーザーログイン", "#"%></li>
+                              <li><%= link_to "ユーザー登録","#"%></li>
+                              <li><%= link_to "オンラインサロン登録", "#"%></li>
+                          </ul>
+                      </li>
+                  </ul>
+              <% end %>
             </nav>
+ 
         </header>
 
     <%= yield %>
