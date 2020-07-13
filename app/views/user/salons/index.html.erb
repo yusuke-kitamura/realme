@@ -1,0 +1,11 @@
+<h2>オンラインサロン一覧</h2>
+
+<div class = "row">
+	<% @salons.each do |salon| %>
+		<%= salon.salon_name %>
+		<%= salon.person_name %>
+		<%= salon.number %>
+		<%= salon.price %>
+		<%= salon.purpose %>
+	<% end %>
+</div>
