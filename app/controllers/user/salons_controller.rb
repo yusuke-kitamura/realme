@@ -1,8 +1,9 @@
 class User::SalonsController < ApplicationController
 	def index
-		@salon = Salon.all
+		@salons = Salon.all
 	end
 
 	def show
+		@salon = Salon.find(params[:id])
 	end
 end
