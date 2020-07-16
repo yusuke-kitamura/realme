@@ -1,0 +1,27 @@
+<h2>ユーザー編集</h2>
+	
+<% form_with model: @user do |f| %>
+	<div class="field">
+        <%= f.label :name, "氏名" %><br />
+        <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :age, "年齢" %><br />
+        <%= f.text_field :age %>
+    </div>
+
+    <div class="field">
+        <%= f.label :job, "職業" %><br />
+        <%= f.text_field :job %>
+    </div>
+
+    <div class="action">
+    	<%= f.submit "変更" %>
+    </div>
+<% end %>
