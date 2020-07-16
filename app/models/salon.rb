@@ -6,4 +6,10 @@ class Salon < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
   has_many :users, through: :favorites
+
+  validates :salon_name, presence: true
+  validates :person_name, presence: true
+  validates :number, presence: true
+  validates :price, presence: true
+  validates :purpose, presence: true
 end
