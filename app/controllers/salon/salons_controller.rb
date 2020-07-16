@@ -1,14 +1,14 @@
 class Salon::SalonsController < ApplicationController
 	def show
-		@salon = Salon.find(params[:id])
+		@salon = current_salon
 	end
 
 	def edit
-		@salon = Salon.find(params[:id])
+		@salon = current_salon
 	end
 
 	def update
-		@salon = Salon.find(params[:id])
+		@salon = current_salon
 		@salon.update
 		redirect_to edit_user_users_path
 	end
