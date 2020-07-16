@@ -12,4 +12,9 @@ class Salon::SalonsController < ApplicationController
 		@salon.update
 		redirect_to edit_user_users_path
 	end
+
+	private
+	def user_params
+		params.require(:salon).permit(:salon_name, :person_name, :email, :number, :price, :purpose)
+	end
 end
