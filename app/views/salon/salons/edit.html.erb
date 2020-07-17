@@ -1,0 +1,33 @@
+<h2>オンラインサロン情報</h2>
+
+<% form_with model: @salon do |f| %>
+	<div class="field">
+        <%= f.label :salon_name, "オンラインサロン名" %><br />
+        <%= f.text_field :salon_name %>
+    </div>
+
+    <div class="field">
+        <%= f.label :person_name, "代表者名" %><br />
+        <%= f.text_field :person_name %>
+    </div>
+
+    <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :number, "会員数" %><br />
+        <%= f.text_field :salon_name %>
+    </div>
+
+    <div class="field">
+        <%= f.label :salon_name, "月極価格" %><br />
+        <%= f.text_field :salon_name %>
+    </div>
+
+    <div class="field">
+        <%= f.label :salon_name, "目的" %><br />
+        <%= f.text_area :salon_name %>
+    </div>
+<% end %>
