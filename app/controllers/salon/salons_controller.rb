@@ -14,7 +14,7 @@ class Salon::SalonsController < ApplicationController
 	end
 
 	private
-	def user_params
+	def salon_params
 		params.require(:salon).permit(:salon_name, :person_name, :email, :number, :price, :purpose)
 	end
 end

@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     	when User
       		user_salons_path
     	end
-  	end
+  end
 
   	def after_sign_out_path_for(resource)
     	case resource
