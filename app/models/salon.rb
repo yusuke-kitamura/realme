@@ -7,6 +7,8 @@ class Salon < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :users, through: :favorites
 
+  attachment :image
+
   validates :salon_name, presence: true
   validates :person_name, presence: true
   validates :number, presence: true

@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :salons, through: :favorites
 
+  attachment :image
+
   validates :name, presence: true
   validates :age, presence: true
 end
