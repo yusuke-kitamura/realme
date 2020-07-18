@@ -1,6 +1,10 @@
 <h2>オンラインサロン情報</h2>
 
 <% form_with model: @salon do |f| %>
+
+	<div class = "field">
+		<%= f.attachment_field :image %> 
+	</div>
 	<div class="field">
         <%= f.label :salon_name, "オンラインサロン名" %><br />
         <%= f.text_field :salon_name %>
