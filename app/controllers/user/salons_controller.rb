@@ -7,9 +7,4 @@ class User::SalonsController < ApplicationController
 	def show
 		@salon = Salon.find(params[:id])
 	end
-
-	private
-	def salon_params
-		params.require(:salon).permit(:salon_name, :person_name,:number,:price,:purpose)
-	end
 end
