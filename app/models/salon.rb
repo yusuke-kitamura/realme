@@ -11,7 +11,4 @@ class Salon < ApplicationRecord
 
   validates :salon_name, presence: true
   validates :person_name, presence: true
-  validates :number, presence: true
-  validates :price, presence: true
-  validates :purpose, presence: true
 end
