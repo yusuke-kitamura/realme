@@ -2,6 +2,7 @@
 
 <div class = "row">
 	<div class = "col-lg-2 offset-lg-2">
+		<%= attachment_image_tag @user, :image, format: 'jpg', class: "img-circle", fallback: "no_image.jpg" %>
 		<h4><%= @user.name %></h4><hr>
 		<h4><%= @user.email %></h4><hr>
 		<h4><%= @user.age %></h4><hr>
