@@ -1,4 +1,5 @@
 class Salon::SalonsController < ApplicationController
+	before_action :authenticate_salon!
 	def show
 		@salon = current_salon
 	end
