@@ -1,8 +1,9 @@
 <h2>ユーザー編集</h2>
 	
-<% form_with model: @user, url: {controller: 'user/users', action: 'update' }, local: true do |f| %>
+<%= form_with model: @user, url: {controller: 'user/users', action: 'update' }, local: true do |f| %>
 
 	<div class = "field">
+        <%= f.label :image, "プロフィール画像" %><br>
 		<%= f.attachment_field :image %> 
 	</div>
 	
