@@ -1,6 +1,7 @@
 <h2>オンラインサロン情報</h2>
 
 <div class = "row">
+	<%= attachment_image_tag @salon, :image, format: 'jpg', class: "img-circle", size: "300x300", fallback: "no_image.jpg" %>
 	<%= @salon.salon_name %>
 	<%= @salon.person_name %>
 	<%= @salon.number %>

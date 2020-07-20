@@ -9,7 +9,7 @@ class Salon::SalonsController < ApplicationController
 
 	def update
 		@salon = current_salon
-		@salon.update
+		@salon.update(salon_params)
 		redirect_to edit_user_users_path
 	end
 
