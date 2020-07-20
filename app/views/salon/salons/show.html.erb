@@ -2,9 +2,9 @@
 
 <div class = "row">
 	<%= attachment_image_tag @salon, :image, format: 'jpg', class: "img-circle", size: "300x300", fallback: "no_image.jpg" %>
-	<%= @salon.salon_name %>
-	<%= @salon.person_name %>
-	<%= @salon.number %>
+	<h4><%= @salon.salon_name %></h4>
+	<h4><%= @salon.person_name %></h4>
+	<h4><%= @salon.number %></h4>
 	<%= @salon.price %>
 	<%= @salon.purpose %>
 </div>
