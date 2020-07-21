@@ -9,13 +9,13 @@
 		<%= link_to "編集", edit_user_users_path, class: "btn btn-outline-secondary w-100" %>
 	</div>
 
-	<div class = "col-lg-7 offset-lg-1">
+	<div class = "col-lg-6 offset-lg-2">
 		<h2>サロン詳細</h2>
 			<%= attachment_image_tag @salon, :image, format: 'jpg', class: "img-circle", size: "300x300", fallback: "no_image.jpg" %>
-			<h4><%= @salon.salon_name %></h4>
-			<h4><%= @salon.person_name %></h4>
-			<h4><%= @salon.number %></h4>
-			<h4><%= @salon.price %></h4>
-			<p><%= @salon.purpose %></p>
+			<h4>オンラインサロン名：<%= @salon.salon_name %></h4>
+			<h4>代表者：<%= @salon.person_name %></h4>
+			<h4>会員数：<%= @salon.number %></h4>
+			<h4>月額価格：<%= @salon.price %></h4>
+			<h4>目的：<%= @salon.purpose %></h4>
 	</div>
 </div>
