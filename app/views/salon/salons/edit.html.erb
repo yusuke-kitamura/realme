@@ -2,41 +2,45 @@
 
 <%= form_with model: @salon, url: {controller: 'salon/salons', action: 'update' }, local: true do |f| %>
 
-	<div class = "field">
-		<%= f.attachment_field :image %> 
-	</div>
+<table class = "table">
+    <tr>
+	<th><%= f.label :image, "プロフィール画像" %></th>
+    <td><%= f.attachment_field :image %></td>
+    </tr>
 	
-	<div class="field">
-        <%= f.label :salon_name, "オンラインサロン名" %><br />
-        <%= f.text_field :salon_name %>
-    </div>
+    <tr>
+	<th><%= f.label :salon_name, "オンラインサロン名" %></th>
+    <td><%= f.text_field :salon_name %></td>
+    </tr>
 
-    <div class="field">
-        <%= f.label :person_name, "代表者名" %><br />
-        <%= f.text_field :person_name %>
-    </div>
+    <tr>
+    <th><%= f.label :person_name, "代表者名" %></th>
+    <td><%= f.text_field :person_name %></td>
+    </tr>
 
-    <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
+    <tr>
+    <th><%= f.label :email %></th>
+    <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+    </tr>
 
-    <div class="field">
-        <%= f.label :number, "会員数" %><br />
-        <%= f.text_field :number %>
-    </div>
+    <tr>
+    <th><%= f.label :number, "会員数" %></th>
+    <td><%= f.text_field :number %></td>
+    </tr>
 
-    <div class="field">
-        <%= f.label :price, "月極価格" %><br />
-        <%= f.text_field :price %>
-    </div>
+    <tr>
+        <th><%= f.label :price, "月極価格" %></th>
+        <td><%= f.text_field :price %></td>
+    </tr>
 
-    <div class="field">
-        <%= f.label :purpose, "目的" %><br />
-        <%= f.text_area :purpose %>
-    </div>
+    <tr>
+        <th><%= f.label :purpose, "目的" %></th>
+        <td><%= f.text_area :purpose %></td>
+    </tr>
+    </table>
 
-    <div class="action">
+    <div class = "action">
         <%= f.submit "変更する" %>
     </div>
+
 <% end %>
