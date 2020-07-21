@@ -11,4 +11,9 @@ class Salon < ApplicationRecord
 
   validates :salon_name, presence: true
   validates :person_name, presence: true
+
+  # いいねされているか判定するメソッド
+  def favorited_by?(current_user) 
+    favorites.where(user_id: current_user.id).exists?
+  end
 end
