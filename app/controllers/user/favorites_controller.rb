@@ -9,5 +9,6 @@ class User::FavoritesController < ApplicationController
 	end
 
 	def destroy
+		@salon = Salon.find(params[:salon_id])
 	end
 end
