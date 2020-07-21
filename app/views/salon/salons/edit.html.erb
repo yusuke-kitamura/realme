@@ -2,52 +2,52 @@
 
 <%= form_with model: @salon, url: {controller: 'salon/salons', action: 'update' }, local: true do |f| %>
 
-<table class = "table">
+<table class = "table table-bordered">
     <tr>
         <div class="row">
-	       <th><%= f.label :image, "プロフィール画像", class: "col-lg-4 offset-lg-3" %></th>
+	       <th class="table-light"><%= f.label :image, "プロフィール画像", class: "col-lg-4 offset-lg-3" %></th>
            <td><%= f.attachment_field :image %></td>
         </div>
     </tr>
 	
     <tr>
         <div class="row">
-            <th><%= f.label :salon_name, "オンラインサロン名", class: "col-lg-4 offset-lg-3" %></th>
+            <th class="table-light"><%= f.label :salon_name, "オンラインサロン名", class: "col-lg-4 offset-lg-3" %></th>
             <td><%= f.text_field :salon_name, class: "col-lg-5" %></td>
         </div>
     </tr>
 
     <tr>
         <div class="row">
-            <th><%= f.label :person_name, "代表者名", class: "col-lg-4 offset-lg-3" %></th>
+            <th class="table-light"><%= f.label :person_name, "代表者名", class: "col-lg-4 offset-lg-3" %></th>
             <td><%= f.text_field :person_name, class: "col-lg-5" %></td>
         </div>
     </tr>
 
     <tr>
         <div class="row">
-            <th><%= f.label :email, class: "col-lg-4 offset-lg-3" %></th>
+            <th class="table-light"><%= f.label :email, class: "col-lg-4 offset-lg-3" %></th>
             <td><%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-lg-5" %></td>
         </div>
     </tr>
 
     <tr>
         <div class="row">
-            <th><%= f.label :number, "会員数", class: "col-lg-4 offset-lg-3" %></th>
+            <th class="table-light"><%= f.label :number, "会員数", class: "col-lg-4 offset-lg-3" %></th>
             <td><%= f.text_field :number, class: "col-lg-5" %></td>
         </div>
     </tr>
 
     <tr>
         <div class="row">
-            <th><%= f.label :price, "月極価格", class: "col-lg-4 offset-lg-3" %></th>
+            <th class="table-light"><%= f.label :price, "月極価格", class: "col-lg-4 offset-lg-3" %></th>
             <td><%= f.text_field :price, class: "col-lg-5" %></td>
         </div>
     </tr>
 
     <tr>
         <div class="row">
-            <th><%= f.label :purpose, "目的", class: "col-lg-4 offset-lg-3" %></th>
+            <th class="table-light"><%= f.label :purpose, "目的", class: "col-lg-4 offset-lg-3" %></th>
             <td><%= f.text_area :purpose, class: "col-lg-5" %></td>
         </div>
     </tr>
