@@ -12,7 +12,7 @@
 	<div class ="col-lg-7 offset-lg-1">
 		<h2>オンラインサロン一覧</h2>
 		<% @salons.each do |salon| %>
-			<!-- サロン画像を挿入 -->
+			<%= attachment_image_tag salon, :image, format: 'jpg', class: "img-circle", size: "300x300", fallback: "no_image.jpg" %>
 			<h4><%= link_to salon.salon_name, user_salon_path(salon) %></h4>
 		<% end %>
 	</div>
