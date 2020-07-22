@@ -15,8 +15,8 @@
 			<% @salons.each do |salon| %>
 				<%= attachment_image_tag salon, :image, format: 'jpg', class: "img-circle", size: "300x300", fallback: "no_image.jpg" %>
 				<h4><%= link_to salon.salon_name, user_salon_path(salon), class: "offset-lg-4" %></h4>
-				<div id="favorites_buttons_<%= @salon.id %>">
-					<%= render 'user/favorites/favorite', salon: @salon %>
+				<div id="favorites_buttons_<%= salon.id %>">
+					<%= render 'user/favorites/favorite', salon: salon %>
 				</div>
 			<% end %>
 		</div>
