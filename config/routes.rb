@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   root "homes#top"
   
   namespace :user do
+    get 'favorites' => 'favorites#index'
   	resource :users
   	resources :salons do
-  		resource :favorites, only: [:index, :create, :destroy]
+  		resource :favorites, only: [:create, :destroy]
   	end
   end
 
