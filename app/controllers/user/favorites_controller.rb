@@ -1,7 +1,7 @@
 class User::FavoritesController < ApplicationController
 	def index
 		@user = current_user
-		@salons = favorites.where(user_id: @user.id).all
+		@favorites = Favorite.where(user_id: @user.id).all
 	end
 
 	def create
@@ -12,7 +12,7 @@ class User::FavoritesController < ApplicationController
 
 	def destroy
 		@salon = Salon.find(params[:salon_id])
-		@favorite = @salon.find(params[user_id: current_user.id])
+		@favorite = Favorite.find_by(params[user_id: current_user.id])
 		@favorite.destroy!
 	end
 end

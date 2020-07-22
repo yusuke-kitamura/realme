@@ -12,9 +12,9 @@
 	<div class ="col-lg-7 offset-lg-1">
 		<h2>お気に入り</h2>
 		<div class="card col-lg-4">
-			<% @salons.each do |salon| %>
-				<%= attachment_image_tag salon, :image, format: 'jpg', class: "img-circle", size: "300x300", fallback: "no_image.jpg" %>
-				<h4><%= link_to salon.salon_name, user_salon_path(salon), class: "offset-lg-4" %></h4>
+			<% @favorites.each do |favorite| %>
+				<%= attachment_image_tag favorite.salon, :image, format: 'jpg', class: "img-circle", size: "300x300", fallback: "no_image.jpg" %>
+				<h4><%= link_to favorite.salon.salon_name, user_salon_path(favorite.salon), class: "offset-lg-4" %></h4>
 			<% end %>
 		</div>
 	</div>
