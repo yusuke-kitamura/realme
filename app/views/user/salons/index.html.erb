@@ -16,17 +16,7 @@
 				<%= attachment_image_tag salon, :image, format: 'jpg', class: "img-circle", size: "300x300", fallback: "no_image.jpg" %>
 				<h4><%= link_to salon.salon_name, user_salon_path(salon), class: "offset-lg-4" %></h4>
 
-				<% if salon.favorited_by?(current_user) %>
-					<%= link_to user_salon_favorites_path(salon), method: :delete, remote: true do %>
-    					<i class="fas fa-heart heart_red fa-lg" style="color: red;" ></i>
-   					<% end %>
-
-				<% else %>  
-
-   					<%= link_to user_salon_favorites_path(salon), method: :post, remote: true do %>
-    					<i class="far fa-heart heart_red fa-lg" style="color: red;"></i>
-   					<% end %>
-				<% end %>
+				<%= render 'user/favorites/favorite', salon: @salon %>
 			<% end %>
 		</div>
 	</div>
