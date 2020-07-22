@@ -3,29 +3,29 @@
 <%= form_with model: @user, url: {controller: 'user/users', action: 'update' }, local: true do |f| %>
 
 <table class = "table table-bordered">
-	<div class = "field">
-        <%= f.label :image, "プロフィール画像" %><br>
-		<%= f.attachment_field :image %> 
+	<div class = "row">
+        <th class="table-light"><%= f.label :image, "プロフィール画像" %></th>
+		<td><%= f.attachment_field :image %> </td>
 	</div>
 	
-	<div class="field">
-        <%= f.label :name, "氏名" %><br />
-        <%= f.text_field :name %>
+	<div class="row">
+        <th class="table-light"><%= f.label :name, "氏名" %></th>
+        <td><%= f.text_field :name %></td>
     </div>
 
-    <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="row">
+        <th class="table-light"><%= f.label :email %></th>
+        <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
     </div>
 
-    <div class="field">
-        <%= f.label :age, "年齢" %><br />
-        <%= f.text_field :age %>
+    <div class="row">
+        <th class="table-light"><%= f.label :age, "年齢" %></th>
+        <td><%= f.text_field :age %></td>
     </div>
 
-    <div class="field">
-        <%= f.label :job, "職業" %><br />
-        <%= f.text_field :job %>
+    <div class="row">
+        <th class="table-light"><%= f.label :job, "職業" %></th>
+        <td><%= f.text_field :job %></td>
     </div>
 </table>
 
