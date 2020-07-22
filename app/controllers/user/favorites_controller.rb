@@ -1,5 +1,7 @@
 class User::FavoritesController < ApplicationController
 	def index
+		@user = current_user
+		@salons = favorites.where(user_id: @user.id).all
 	end
 
 	def create
