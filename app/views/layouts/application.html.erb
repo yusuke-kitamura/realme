@@ -19,7 +19,7 @@
               <% if user_signed_in? %>
                   <ul>
                       <li class="dropdown">
-                          <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU</button>
+                          <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="navbar-toggler-icon"></button>
                           <ul class="dropdown-menu">
                               <li><%= link_to "オンラインサロン", user_salons_path %></li>
                               <li><%= link_to "ブックマーク", user_favorites_path %></li>
@@ -32,7 +32,7 @@
               <% elsif salon_signed_in? %>
                   <ul>
                       <li class="dropdown">
-                          <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU</button>
+                          <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="navbar-toggler-icon"></button>
                           <ul class="dropdown-menu">
                               <li><%= link_to "オンラインサロン情報", salon_salon_path %></li>
                               <li><%= link_to "編集", edit_salon_salon_path %></li>
@@ -45,7 +45,7 @@
               <% else %>
                   <ul>
                       <li class="dropdown">
-                          <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENU</button>
+                          <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="navbar-toggler-icon"></button>
                           <ul class="dropdown-menu">
                               <li><%= link_to "オンラインサロンログイン", new_salon_session_path %></li>
                               <li><%= link_to "ユーザーログイン", new_user_session_path %></li>
