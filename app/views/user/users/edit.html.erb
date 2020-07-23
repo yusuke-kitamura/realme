@@ -5,41 +5,41 @@
 <table class = "table table-bordered">
     <tr>
 	   <div class = "row">
-            <th class="table-light"><%= f.label :image, "プロフィール画像" %></th>
+            <th class="table-light"><%= f.label :image, "プロフィール画像", class: "col-lg-4 offset-lg-2" %></th>
             <td><%= f.attachment_field :image %> </td>
 	   </div>
     </tr>
 
     <tr>
 	   <div class="row">
-            <th class="table-light"><%= f.label :name, "氏名" %></th>
-            <td><%= f.text_field :name %></td>
+            <th class="table-light"><%= f.label :name, "氏名", class: "col-lg-4 offset-lg-2" %></th>
+            <td><%= f.text_field :name, class: "col-lg-6" %></td>
         </div>
     </tr>
 
     <tr>
         <div class="row">
-            <th class="table-light"><%= f.label :email %></th>
-            <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+            <th class="table-light"><%= f.label :email, "Eメール", class: "col-lg-4 offset-lg-2" %></th>
+            <td><%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-lg-6" %></td>
         </div>
     </tr>
 
     <tr>
         <div class="row">
-            <th class="table-light"><%= f.label :age, "年齢" %></th>
-            <td><%= f.text_field :age %></td>
+            <th class="table-light"><%= f.label :age, "年齢", class: "col-lg-4 offset-lg-2" %></th>
+            <td><%= f.text_field :age, class: "col-lg-6" %></td>
         </div>
     </tr>
 
     <tr>
         <div class="row">
-            <th class="table-light"><%= f.label :job, "職業" %></th>
-            <td><%= f.text_field :job %></td>
+            <th class="table-light"><%= f.label :job, "職業", class: "col-lg-4 offset-lg-2" %></th>
+            <td><%= f.text_field :job, class: "col-lg-6" %></td>
         </div>
     </tr>
 </table>
 
-    <div class="action">
-    	<%= f.submit "変更" %>
+    <div class="row-actions">
+    	<%= f.submit "変更", class: "btn btn-secondary col-lg-3 offset-lg-4" %>
     </div>
 <% end %>
