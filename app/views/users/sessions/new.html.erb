@@ -2,13 +2,13 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="row">
-    <%= f.label :email, "Eメール" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, "Eメール", class: "col-lg-8 offset-lg-4" %><br>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "col-lg-4 offset-lg-4" %>
   </div>
 
   <div class="row">
-    <%= f.label :password, "パスワード" %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.label :password, "パスワード", class: "col-lg-8 offset-lg-4" %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class: "col-lg-4 offset-lg-4" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
