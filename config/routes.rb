@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :user do
+    get 'rooms/show'
+  end
   devise_for :salons, controllers: {   
   registrations: 'salons/registrations',
   sessions: 'salons/sessions' }
