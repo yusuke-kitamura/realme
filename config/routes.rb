@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :salon do
+    get 'rooms/show'
+  end
   namespace :user do
     get 'rooms/show'
   end
