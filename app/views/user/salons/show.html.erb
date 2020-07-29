@@ -17,6 +17,6 @@
 			<h4>会員数：<%= @salon.number %>名</h4>
 			<h4>月額価格：¥<%= @salon.price %></h4>
 			<h4>目的：<%= @salon.purpose %></h4>
-			<%= link_to "メッセージを送る", user_salon_rooms_path(@salon) %>
+			<%= link_to "メッセージを送る", user_salon_rooms_path(@salon), class: "btn btn-primary" %>
 	</div>
 </div>
