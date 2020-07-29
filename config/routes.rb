@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   
   namespace :user do
     get 'favorites' => 'favorites#index'
+    get 'rooms' => 'rooms#index'
   	resource :users
   	resources :salons do
   		resource :favorites, only: [:create, :destroy]
