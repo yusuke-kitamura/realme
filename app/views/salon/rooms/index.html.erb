@@ -1,5 +1,6 @@
 <h2>メッセージ</h2>
 
 <%= @users.each do |user| %>
-
+	<%= attachment_image_tag user, :image, format: 'jpg', class: "img-circle", size: "300x300", fallback: "no_image.jpg" %>
+	<h4><%= link_to user.name, "#", class: "offset-lg-4" %></h4>
 <% end %>
