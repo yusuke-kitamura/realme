@@ -1,6 +1,8 @@
 class User::RoomsController < ApplicationController
 
   def index
+  	# メッセージしたサロンを取得する
+  	@salons = Salon.all
   end
 
   def show
