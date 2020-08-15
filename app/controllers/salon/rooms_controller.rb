@@ -1,5 +1,7 @@
 class Salon::RoomsController < ApplicationController
   def index
+  	# メッセージしたサロンを取得する
+  	@users = User.all
   end
 
   def show
